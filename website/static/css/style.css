@@ -139,10 +139,10 @@ section {
 .btn {
     display: inline-block;
     padding: 13px 32px;
-    background: var(--main-color);
+    background: #f39c19;
     border: 2px solid transparent;
     border-radius: 8px;
-    color: var(--text-color);
+    color: var(--main-color);
     font-size: 15px;
     font-weight: 500;
     transition: all .6s ease;
@@ -256,7 +256,7 @@ section {
         left: 100%;
         display: flex;
         flex-direction: column;
-        backdrop-filter: blur(32px);
+        backdrop-filter: blur(50px);
         transition: all .6s ease-in-out;
     }
     .navlist a {
