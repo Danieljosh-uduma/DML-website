@@ -205,6 +205,15 @@ section {
     margin-right: 6px;
 }
 
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #f39c19;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
 @media(max-width: 1770px){
     header {
         padding: 22px 4%;

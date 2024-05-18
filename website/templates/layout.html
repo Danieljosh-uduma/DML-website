@@ -31,7 +31,7 @@
         <a href="" class='logo'><h1>DML</h1></a>
         <ul class="navlist">
             <li><a href="">about</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="{% url "contact:homepage" %}">contact</a></li>
             <li><a href="">help</a></li>
             <li><a href="">membership</a></li>
         </ul>
@@ -46,5 +46,8 @@
         {% endblock content %}
         <script src="{% static "js/main.js" %}"></script>
     </main>    
+    <footer class="footer">
+        <p class="copy">Deep machine learning &copy {% now "Y" %}</p>
+    </footer>
 </body>
 </html>
