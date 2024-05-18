@@ -315,7 +315,7 @@ section {
 }
 @media(max-width: 440px){
     :root {
-        --big-font: 3.4rem;
+        --big-font: 3.6rem;
     }
     .hero-text h5{
         font-size: 15px;
