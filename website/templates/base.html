@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+</head>
+<body>
+    <div id="header">
+        <span class="logo">DML Technologies</span>
+        {% if request.user.is_authenticated %}
+        <ul class="menu">
+            <li {% if section == "main/" %}" %} class="selection" {% endif %}>
+                <a href="{% url "home:mainpage" %}">HOME</a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+    <div id="content">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+</body>
+</html>

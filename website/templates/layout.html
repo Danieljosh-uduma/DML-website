@@ -28,12 +28,13 @@
 </head>
 <body>
     <header>
-        <a href="" class='logo'><h1>DML</h1></a>
+        <a href="{% url "home:homepage" %}" class='logo'><h1>DML</h1></a>
         <ul class="navlist">
-            <li><a href="">about</a></li>
+            <li><a href="{% url "home:mainpage" %}">Home</a></li>
+            <li><a href="{% url "contact:about" %}">About</a></li>
             <li><a href="{% url "contact:homepage" %}">contact</a></li>
-            <li><a href="">help</a></li>
-            <li><a href="">membership</a></li>
+            <li><a href="{% url "contact:member" %}">membership</a></li>
+            <li><a href="">Team</a></li>
         </ul>
         <div class="right-content">
             <a href="" class="nav-btn">sign in</a>
@@ -42,12 +43,12 @@
     </header>
     <main class="main">
         {% block content %}
-        
+    
         {% endblock content %}
+        <footer class="footer">
+            <p class="copy">Deep machine learning &copy {% now "Y" %}</p>
+        </footer>
         <script src="{% static "js/main.js" %}"></script>
     </main>    
-    <footer class="footer">
-        <p class="copy">Deep machine learning &copy {% now "Y" %}</p>
-    </footer>
 </body>
 </html>

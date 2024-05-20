@@ -12,7 +12,7 @@
     --text-color: #fff;
     --main-color: cyan;
 
-    --big-font: 6.5rem;
+    --big-font: 5rem;
     --p-font: 1rem;
 }
 
@@ -106,8 +106,9 @@ section {
 
 .laptop-img img{
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
+
 
 .hero-text h1 {
     font-size: var(--big-font);
@@ -142,7 +143,7 @@ section {
     background: #f39c19;
     border: 2px solid transparent;
     border-radius: 8px;
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 500;
     transition: all .6s ease;
@@ -209,10 +210,72 @@ section {
     position: relative;
     bottom: 0;
     left: 0;
-    background-color: #f39c19;
     width: 100%;
     height: auto;
     text-align: center;
+    color: var(--text-color);
+}
+
+.aside {
+    border: 2px solid white;
+    margin-left: 120px;
+    margin-top: 15vh;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .6s ease;
+}
+
+.aside:hover {
+    border: 2px solid var(--main-color);
+    transform: translateY(-20px);
+}
+.aside h3{
+    padding: 5px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.aside form input{
+    background: transparent;
+    border: none;
+    margin: 5px;
+    align-items: center;
+}
+.aside form input::placeholder {
+    color: var(--text-color);
+    transition: all .6s ease;
+}
+.aside form input:hover::placeholder {
+    color: var(--main-color);
+}
+.aside form #email {
+    color: var(--text-color);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 90%;
+    padding: 5px 10px;
+}
+.aside form .sign-up  {
+    color: var(--text-color);
+    background-color: #f39c19;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 30%;
+    position: relative;
+    left: 30%;
+    transition: all .6s ease;
+}
+.aside form .sign-up:hover {
+    transform: scale(0.9999);
+    color: var(--text-color);
+    background-color: #f1b964;
+}
+.aside p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    margin-bottom: 3px;
+    margin-top: 7px;
 }
 @media(max-width: 1770px){
     header {
@@ -299,6 +362,11 @@ section {
         width: 100%;
         object-fit: contain;
     }
+    .aside {
+        position: absolute;
+        top: 100vh;
+        align-content: center;
+    }
 }
 @media(max-width: 570px){
     .hero {
@@ -312,6 +380,10 @@ section {
     :root {
         --big-font: 4rem;
     }
+    .aside {
+        left: 5px;
+        right: 85px;
+    }
 }
 @media(max-width: 440px){
     :root {
@@ -324,5 +396,8 @@ section {
         height: 280px;
         width: 360px;
         margin: 0 auto;
+    }
+    .aside {
+        top: 40%;       
     }
 }
