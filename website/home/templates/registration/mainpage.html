@@ -8,5 +8,8 @@
     <h1>dashboard</h1>
     hello, {{ request.user.username }}
     <p>welcome to your page</p>
-    <a href="{% url "home:logout" %}">logout</a>
+    <form action="{% url "home:mainpage" %}" method='post'>
+        <a href="{% url "home:logout" %}">logout</a>
+    </form>
+    
 {% endblock content %}
